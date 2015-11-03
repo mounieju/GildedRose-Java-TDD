@@ -6,10 +6,21 @@ import org.junit.Test;
 
 public class GildedRoseTest
 {
+	 
 	@Test
 	public void aSimpleBeginningTest()
 	{
 		assertEquals(true,false);
+	}
+	
+	
+	@Test
+	public void testBothValuesOfItemsLowerAtTheEndOfEachDay()
+	{
+		Item itemTest = new Item("Conjured Mana Cake", 3, 6);
+		GildedRose.updateItem(itemTest);
+		assertEquals(itemTest.getSellIn(),2);
+		assertEquals(itemTest.getQuality(),5);
 	}
 
 }
