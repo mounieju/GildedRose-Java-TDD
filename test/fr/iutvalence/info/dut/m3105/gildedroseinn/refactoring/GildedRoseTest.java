@@ -5,14 +5,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class GildedRoseTest
-{
-	 
-	@Test
-	public void aSimpleBeginningTest()
-	{
-		assertEquals(true,false);
-	}
-	
+{	
 	
 	@Test
 	public void testBothValuesOfItemsLowerAtTheEndOfEachDay()
