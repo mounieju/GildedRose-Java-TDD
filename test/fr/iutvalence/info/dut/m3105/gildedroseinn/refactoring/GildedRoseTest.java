@@ -40,7 +40,7 @@ public class GildedRoseTest
 	{
 		ArrayList<Item> listOfItemsTest = new ArrayList<>();
 		GildedRose.updateItems(listOfItemsTest);
-		assertEquals(listOfItemsTest.size(), null);	
+		assertEquals(listOfItemsTest.size(), 0);	
 	}
  
 	/*
@@ -59,8 +59,26 @@ public class GildedRoseTest
 	}
 	*/
 	
-	
+	@Test
+	public void testQualityOfOneItemInCollectionDegradesTwiceAsFastOnceSellByDateHasPassed()
+	{
+		Item itemTest = new Item("Conjured Mana Cake", 0, 6);
+		GildedRose.updateItem(itemTest);
+		assertEquals(itemTest.getQuality(),4);
+	}
 
-	
+	@Test
+	public void testQualityOfMoreThanOneItemInCollectionDegradesTwiceAsFastOnceSellByDateHasPassed()
+	{
+		ArrayList<Item> listOfItemsTest = new ArrayList<>();
+		listOfItemsTest.add(new Item("Conjured Mana Cake", 0, 6));
+		listOfItemsTest.add(new Item("SUSHI", 0, 6));
+		listOfItemsTest.add(new Item("SHIBA", 0, 6));
+		GildedRose.updateItems(listOfItemsTest);
+		for (int indexInItemList = 0; indexInItemList < listOfItemsTest.size(); indexInItemList++)
+		{
+			assertEquals(listOfItemsTest.get(indexInItemList).getQuality(), 4);
+		}
+	}
 	
 }
