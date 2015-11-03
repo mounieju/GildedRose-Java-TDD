@@ -40,11 +40,7 @@ public class GildedRoseTest
 	{
 		ArrayList<Item> listOfItemsTest = new ArrayList<>();
 		GildedRose.updateItems(listOfItemsTest);
-		for (int indexInItemList = 0; indexInItemList < listOfItemsTest.size(); indexInItemList++)
-		{
-			assertEquals(listOfItemsTest.get(indexInItemList).getSellIn(), null);
-			assertEquals(listOfItemsTest.get(indexInItemList).getQuality(), null);
-		}		
+		assertEquals(listOfItemsTest.size(), null);	
 	}
  
 	/*
@@ -62,4 +58,9 @@ public class GildedRoseTest
 		}		
 	}
 	*/
+	
+	
+
+	
+	
 }
